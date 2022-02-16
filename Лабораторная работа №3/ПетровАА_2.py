@@ -17,3 +17,6 @@ while i < lengthOfArray - 1:
     i += 2
 
 print("Переставленный массив:", array)
+print("Минимальное значение из массива:", minElement)
+print("Максимальное значение из массива:", maxElement)
+print("Длина массива:", lengthOfArray)
