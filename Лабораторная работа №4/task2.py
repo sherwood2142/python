@@ -10,26 +10,13 @@ arr1Str = str1.split(" ")
 str2 = str2.replace("\n", "")
 arr2Str = str2.split(" ")
 
-arr1 = []
-arr2 = []
+arr1 = set()
+arr2 = set()
 for i in range(len(arr1Str)):
-    arr1.append(int(arr1Str[i]))
+    arr1.add(int(arr1Str[i]))
 for i in range(len(arr2Str)):
-    arr2.append(int(arr2Str[i]))
+    arr2.add(int(arr2Str[i]))
 
-print(arr1)
-print(arr2)
+# print(arr1, arr2)
 
-arrContain = []
-equalMemory = []
-
-for i in range(len(arr1)):
-    for j in range(len(arr2)):
-        if arr1[i] == arr2[j]:
-            if arr1[i] not in equalMemory:
-                arrContain.append(arr1[i])
-            else:
-                equalMemory.append(arr1[i])
-
-arrContain.sort()
-print(arrContain)
+print(sorted(arr1.intersection(arr2)))
