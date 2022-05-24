@@ -3,16 +3,16 @@ txt = open(filePath, 'r')
 txtString = txt.read()
 txt.close()
 
-uniqueSymbols = []
+uniqueSymbols = set()
 equalMemory = []
 
 for i in range(len(txtString)):
     if txtString[i] != " ":
         if txtString[i] not in equalMemory:
-            uniqueSymbols.append(txtString[i])
+            uniqueSymbols.add(txtString[i])
             equalMemory.append(txtString[i])
         else:
-            if len(uniqueSymbols) > 0:
+            if txtString[i] in uniqueSymbols:
                 uniqueSymbols.remove(txtString[i])
 
 print(f"Количество уникальных символов: {len(uniqueSymbols)}")
